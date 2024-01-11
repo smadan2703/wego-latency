@@ -10,6 +10,7 @@ export const options = {
 };
 
 export default () => {
-  const urlRes = http.get('https://southeast1-latency.wego.com/todos');
+  const urlRes = http.get('https://eucentral1-latency.wego.com/todos/');
   sleep(1);
 };
+

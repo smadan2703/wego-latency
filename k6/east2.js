@@ -1,4 +1,5 @@
 import http from 'k6/http';
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 import {sleep} from 'k6';
 
 export const options = {
@@ -12,4 +13,3 @@ export default () => {
   const urlRes = http.get('https://east2-latency.wego.com/todos');
   sleep(1);
 };
-
