@@ -3,11 +3,15 @@ const https = require("https");
 const fs = require("fs");
 const noCache = require('nocache');
 const routes = require("./routes");
+const cors = require('cors'); // Import cors middleware
 
 // App
 const app = express();
 app.use(noCache());
 app.set('etag', false);
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Set port
 const port = process.env.PORT || 443; // Default HTTPS port
